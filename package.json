@@ -1,0 +1,10 @@
+{
+  "name": "atbd-llm-security-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend-vite run dev",
+    "build": "npm --prefix frontend-vite run build",
+    "preview": "npm --prefix frontend-vite run preview"
+  }
+}

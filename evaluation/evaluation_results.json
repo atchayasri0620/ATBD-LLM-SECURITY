@@ -1,0 +1,76 @@
+{
+    "experiment": {
+        "name": "Adaptive Token-Level Behavioral Defense Evaluation",
+        "timestamp": "2026-09-13T22:08:13.170035",
+        "api": "FastAPI /api/chat",
+        "model": "llama3.2",
+        "data_source": "Real ATBD API simulation results"
+    },
+    "scenarios": {
+        "NORMAL_USER": {
+            "total_requests": 10,
+            "successful_requests": 10,
+            "average_risk_score": 13.06,
+            "maximum_risk_score": 28.75,
+            "minimum_risk_score": 8.7,
+            "average_latency_ms": 10965.2,
+            "total_tokens": 947,
+            "average_tokens_per_request": 94.7,
+            "actions": {
+                "ALLOW": 10,
+                "DELAY": 0,
+                "THROTTLE": 0,
+                "BLOCK": 0
+            }
+        },
+        "MODEL_EXTRACTION": {
+            "total_requests": 15,
+            "successful_requests": 15,
+            "average_risk_score": 26.32,
+            "maximum_risk_score": 30.25,
+            "minimum_risk_score": 24.11,
+            "average_latency_ms": 30948.34,
+            "total_tokens": 510,
+            "average_tokens_per_request": 34,
+            "actions": {
+                "ALLOW": 14,
+                "DELAY": 1,
+                "THROTTLE": 0,
+                "BLOCK": 0
+            }
+        },
+        "DENIAL_OF_WALLET": {
+            "total_requests": 10,
+            "successful_requests": 10,
+            "average_risk_score": 14.28,
+            "maximum_risk_score": 43.75,
+            "minimum_risk_score": 8.93,
+            "average_latency_ms": 31182.79,
+            "total_tokens": 590,
+            "average_tokens_per_request": 59,
+            "actions": {
+                "ALLOW": 9,
+                "DELAY": 1,
+                "THROTTLE": 0,
+                "BLOCK": 0
+            }
+        }
+    },
+    "security_metrics": {
+        "false_positive_rate_percent": 0.0,
+        "model_extraction": {
+            "detection_rate_percent": 6.67,
+            "average_risk_score": 26.32,
+            "maximum_risk_score": 30.25,
+            "average_latency_ms": 30948.34,
+            "total_tokens": 510
+        },
+        "denial_of_wallet": {
+            "detection_rate_percent": 10.0,
+            "average_risk_score": 14.28,
+            "maximum_risk_score": 43.75,
+            "average_latency_ms": 31182.79,
+            "total_tokens": 590
+        }
+    }
+}

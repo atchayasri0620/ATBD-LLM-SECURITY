@@ -1,0 +1,37 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend-vite/node_modules/
+
+# Build
+dist/
+build/
+frontend/dist/
+frontend-vite/dist/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated attack results
+attack_simulation/results/
+attack_simulation/attack_simulation/results/
+attack_simulation/results.json
